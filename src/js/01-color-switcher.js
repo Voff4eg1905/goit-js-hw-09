@@ -6,6 +6,7 @@ let ColorChangeId = null;
 const startButtonEl = document.querySelector('button[data-start]');
 const stopButtonEl = document.querySelector('button[data-stop]');
 
+
 onStartClick = event => {
   console.log('Start Clicked');
   if (startPressed) {
@@ -13,8 +14,10 @@ onStartClick = event => {
   }
   startPressed = true;
   ColorChangeId = setInterval(changeColor, 1000);
+  startButtonEl.disabled = true;
   function changeColor() {
     document.body.style.backgroundColor = getRandomHexColor();
+
   }
 };
 
@@ -23,6 +26,7 @@ onStopClick = event => {
     clearInterval(ColorChangeId);
   startPressed = false;
   document.body.style.backgroundColor = 'white';
+  startButtonEl.disabled = false;
 };
 startButtonEl.addEventListener('click', onStartClick);
 stopButtonEl.addEventListener('click', onStopClick);
