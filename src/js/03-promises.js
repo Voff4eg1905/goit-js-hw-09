@@ -15,7 +15,6 @@ const onFormSubmit = event => {
 
  setTimeout(() => {
   for (let i = 1; i <= amount; i +=1) {
-    console.log(i);
     if (i>1) {
       delay = delay + step;
     }
