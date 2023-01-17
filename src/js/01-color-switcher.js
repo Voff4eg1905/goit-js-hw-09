@@ -10,7 +10,7 @@ const onStartClick = event => {
   console.log('Start Clicked');
   if (startPressed) {
     return;
-  }
+  } 
   startPressed = true;
   ColorChangeId = setInterval(changeColor, 1000);
   startButtonEl.disabled = true;
