@@ -10,7 +10,7 @@ const secondsEl = document.querySelector('span[data-seconds]');
 const startEl = document.querySelector('button[data-start]');
 startEl.disabled = true;
 let timerCounterID = null;
-let timerStarted = false;
+let timerStarted = false; 
 
 const options = {
   enableTime: true,
