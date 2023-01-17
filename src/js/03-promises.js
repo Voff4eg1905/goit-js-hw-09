@@ -4,7 +4,6 @@ const formEl = document.querySelector(".form");
 const firstDelayEl = document.querySelector('input[name="delay"]');
 const stepEl = document.querySelector('input[name="step"]');
 const amountEl = document.querySelector('input[name="amount"]');
-console.log(formEl);
 
 const onFormSubmit = event => {
   let {delay, step, amount} = event.target.elements
@@ -13,7 +12,7 @@ const onFormSubmit = event => {
  step = step.value*1000;
  amount = amount.value;
 
- setTimeout(() => {
+ 
   for (let i = 1; i <= amount; i +=1) {
     if (i>1) {
       delay = delay + step;
@@ -25,7 +24,7 @@ const onFormSubmit = event => {
     Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
     });
    }
- }, delay)
+ 
  
 }
 formEl.addEventListener("submit", onFormSubmit)
