@@ -6,7 +6,7 @@ let ColorChangeId = null;
 const startButtonEl = document.querySelector('button[data-start]');
 const stopButtonEl = document.querySelector('button[data-stop]');
 
-onStartClick = event => {
+const onStartClick = event => {
   console.log('Start Clicked');
   if (startPressed) {
     return;
@@ -19,7 +19,7 @@ onStartClick = event => {
   }
 };
 
-onStopClick = event => {
+const onStopClick = event => {
   console.log('Stop Clicked');
   clearInterval(ColorChangeId);
   startPressed = false;
