@@ -5,15 +5,16 @@ const formEl = document.querySelector(".form");
 const onFormSubmit = event => {
   let {delay, step, amount} = event.target.elements
   event.preventDefault();
- delay = delay.value*1000;
- step = step.value*1000;
- amount = amount.value;
-
+ delay = +delay.value;
+ step = +step.value;
+ amount = +amount.value;
  
   for (let i = 1; i <= amount; i +=1) {
     if (i>1) {
       delay = delay + step;
     }
+    // console.log(delay);
+
     createPromise(i, delay).then(({ position, delay }) => {
       Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
     })
