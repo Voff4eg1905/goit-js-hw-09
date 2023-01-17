@@ -43,7 +43,7 @@ const onStartClick = event => {
     // minutesEl.textContent = minutes;
     // secondsEl.textContent = seconds;
 
-    for (i = 0; i < allSelects.length; i += 1) {
+    for (let i = 0; i < allSelects.length; i += 1) {
       allSelects[i].textContent = Object.values(convertMs(timeDifference))[i];
     }
 
